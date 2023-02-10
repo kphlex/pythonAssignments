@@ -46,12 +46,13 @@ class BankAccount:
             account.display_account_info()
         
 
-# accountOne = BankAccount(.05)
+accountOne = BankAccount(.05)
 
-# accountTwo = BankAccount(.075)
+accountTwo = BankAccount(.075)
 
-# accountOne.deposit(200).deposit(1200).deposit(3000).withdraw(500).yield_interest().display_account_info()
+accountOne.deposit(200).deposit(1200).deposit(3000).withdraw(500).yield_interest().display_account_info()
 
-# accountTwo.deposit(760). deposit(5239).withdraw(75).withdraw(100).withdraw(120).withdraw(570).yield_interest().display_account_info()
+accountTwo.deposit(760). deposit(5239).withdraw(75).withdraw(100).withdraw(120).withdraw(570).yield_interest().display_account_info()
 
-# BankAccount.accounts_info()
+BankAccount.accounts_info()
+

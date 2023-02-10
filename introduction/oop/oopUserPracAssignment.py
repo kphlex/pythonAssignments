@@ -8,6 +8,7 @@ class User:
         self.gold_card_points = points
         
     # Method prints Users Info on separate lines 
+    
     def display_info(self):
         print(f"\n{self.first_name}\n{self.last_name}\n{self.email}\n{self.age}")
         return self
@@ -47,3 +48,5 @@ userOne.display_info().enroll().spend_points(50)
 userTwo.display_info().enroll().spend_points(80)
 
 userThree.display_info().spend_points(40)
+
+

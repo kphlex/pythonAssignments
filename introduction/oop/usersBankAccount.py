@@ -49,12 +49,11 @@ class BankAccount:
 
 class User:
     all_users = []
-
+    
     def __init__(self, name, email):
         self.name = name
         self.email = email
         self.account = BankAccount(int_rate = .05, balance = 0)
-        
         
     def make_deposit(self, amount, accountType=""):
         self.account.deposit (amount)
@@ -71,10 +70,12 @@ class User:
         self.account.display_account_info()
         
     # Transfers money from user 1 to user 2. If user 1 does not have enough, it doesnt send. 
-    def transfer_money(self, amount, other_user):
+    def transfer_money(self, amount, reciever):
         if  self.account.balance > amount:
             self.account.balance - amount
+            user2.account.balance += amount
             print(f"{user1.name} sent you ${amount}!")
+            print(user2.account.balance) 
             return self
         else :
             print("Try transfer later....")
@@ -84,7 +85,7 @@ class User:
 user1 = User("Darth Vader","empireStrikesBack@deathstar.com")
 user2 = User("Jabba DaHut","tatooineCutie@HuttClanCrimeSyndicate.com")
 
-user1.make_deposit(2000, "savings").display_User_account()
-user2.make_deposit(200, "checking").display_User_account()
+user1.make_deposit(2000, "checking").display_User_account()
+user2.make_deposit(200, "savings").display_User_account()
 
 user1.transfer_money(.99, user2)
