@@ -31,6 +31,5 @@ class Ninja:
 green_ninja = Ninja("First", "One", pet.pet_1.name, treats[1], pet_food[0])
 
 print(green_ninja)
-print(green_ninja.pet_food)
 
 green_ninja.walk().bathe().feed()
